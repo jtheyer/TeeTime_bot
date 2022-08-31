@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.0 on win32)" generated="20220831 00:59:01.899" rpa="true" schemaversion="3">
+<suite id="s1" name="Tee Time" source="c:\Users\jhkon\Desktop\Dev\python_projects\TeeTime_bot\tee_time.robot">
+<test id="s1-t1" name="Programar una Hora" line="8">
+<kw name="Navegar Por" library="keywords">
+<arg>https://www.easycancha.com/login</arg>
+<status status="PASS" starttime="20220831 00:59:04.614" endtime="20220831 00:59:09.631"/>
+</kw>
+<kw name="Ingresar" library="keywords">
+<arg>email: Hagemanjames@yahoo.com</arg>
+<msg timestamp="20220831 00:59:15.736" level="FAIL">TimeoutException: Message: 
+</msg>
+<status status="FAIL" starttime="20220831 00:59:09.632" endtime="20220831 01:01:03.733"/>
+</kw>
+<kw name="Ingresar" library="keywords">
+<arg>clave: Lucas2022!</arg>
+<status status="NOT RUN" starttime="20220831 01:01:03.734" endtime="20220831 01:01:03.734"/>
+</kw>
+<kw name="Apreton" library="keywords">
+<arg>Login</arg>
+<status status="NOT RUN" starttime="20220831 01:01:03.735" endtime="20220831 01:01:03.735"/>
+</kw>
+<kw name="Apreton" library="keywords">
+<arg>club brisas</arg>
+<status status="NOT RUN" starttime="20220831 01:01:03.735" endtime="20220831 01:01:03.736"/>
+</kw>
+<kw name="Apreton" library="keywords">
+<arg>Golf</arg>
+<status status="NOT RUN" starttime="20220831 01:01:03.736" endtime="20220831 01:01:03.737"/>
+</kw>
+<kw name="Escoja" library="keywords">
+<arg>hoy o manana?</arg>
+<arg>hoy</arg>
+<status status="NOT RUN" starttime="20220831 01:01:03.737" endtime="20220831 01:01:03.737"/>
+</kw>
+<kw name="Escoja" library="keywords">
+<arg>la hora:</arg>
+<arg>14:00</arg>
+<status status="NOT RUN" starttime="20220831 01:01:03.738" endtime="20220831 01:01:03.738"/>
+</kw>
+<kw name="Close The Browser" library="keywords" type="TEARDOWN">
+<status status="PASS" starttime="20220831 01:01:03.740" endtime="20220831 01:01:05.839"/>
+</kw>
+<status status="FAIL" starttime="20220831 00:59:04.611" endtime="20220831 01:01:05.840">TimeoutException: Message: 
+</status>
+</test>
+<doc>Set a tee time.
+Take care to leave at least 2 (or 4) spaces between key words.
+E.g., "hoy o manana? _ _ manana" or "hoy o manana? _ _ _ _ hoy"</doc>
+<status status="FAIL" starttime="20220831 00:59:01.905" endtime="20220831 01:01:05.843"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tee Time">Tee Time</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

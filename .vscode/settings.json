@@ -1,0 +1,8 @@
+{
+    "python.analysis.extraPaths": ["${workspaceFolder}\\botenv\\Lib\\site-packages"],
+    "python.analysis.useLibraryCodeForTypes": true,
+    "robot.pythonpath": [
+        "${workspaceFolder}",
+        "${workspaceFolder}\\src"
+        ],
+}

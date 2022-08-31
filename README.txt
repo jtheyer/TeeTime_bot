@@ -1,0 +1,2 @@
+-- Add chromedriver.exe to PATH
+-- Double click Make_Tee_Time_reservation.bat

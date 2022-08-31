@@ -1,0 +1,3 @@
+cmd /k "cd /d C:\Users\jhkon\Desktop\Dev\python_projects\TeeTime_bot\botenv\Scripts & activate"
+cd /d C:\Users\jhkon\Desktop\Dev\python_projects\TeeTime_bot
+python scratch.py
