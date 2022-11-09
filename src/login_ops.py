@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
-from src.omnipresent import Omnipresent
+from omnipresent import Omnipresent
 
 class LoginOpsSelectors:
     USERNAME_FIELD = 'username'
@@ -20,8 +20,7 @@ class LoginOps:
         '''Enter the given email.'''
         Omnipresent.log(f'entering email.... {email}')
         # skip if not on /login endpoint
-        logged_in = LoginOps.wait.until(EC.url_contains('/book/search'), '/book/search not found')
-        if logged_in:
+        if '/book/search' in LoginOps.driver.current_url:
             return
         el = LoginOps.wait.until(EC.presence_of_element_located(
             (By.NAME, 'email')
@@ -35,8 +34,7 @@ class LoginOps:
         '''Enter the given password.'''
         Omnipresent.log(f'entering pw.... {pw}')
         # skip if not on /login endpoint
-        logged_in = LoginOps.wait.until(EC.url_contains('/book/search'))
-        if logged_in:
+        if '/book/search' in LoginOps.driver.current_url:
             return
         el = LoginOps.wait.until(EC.presence_of_element_located(
             (By.NAME, 'password')
@@ -50,14 +48,13 @@ class LoginOps:
         '''Press the "Log-in" button.'''
         Omnipresent.log(f'Press the "Log-in" button.')
         # skip if not on /login endpoint
-        logged_in = LoginOps.wait.until(EC.url_contains('/book/search'))
-        if logged_in:
+        if '/book/search' in LoginOps.driver.current_url:
             return
         btn_list = LoginOps.wait.until(EC.presence_of_all_elements_located(
             (By.TAG_NAME, 'button')
         ), f'{__class__} failed to find buttons (for "Log-in")')
         for e in btn_list:
             label = e.get_attribute("innerText")
-            Omnipresent.log(label)
-            if 'Log-in' in label:
-                ActionChains(LoginOps.driver).pause(.2).click(e).pause(.2).perform()
+            if 'Ingresar' in label:
+                return ActionChains(LoginOps.driver).pause(.2).click(e).pause(.2).perform()
+                

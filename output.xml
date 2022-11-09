@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.0 on win32)" generated="20220913 09:59:56.861" rpa="true" schemaversion="3">
+<suite id="s1" name="Tee Time" source="c:\Users\jhkon\Desktop\Dev\python_projects\TeeTime_bot\tee_time.robot">
+<test id="s1-t1" name="Programar una Hora" line="9">
+<kw name="Navegar por">
+<arg>https://www.easycancha.com/login</arg>
+<msg timestamp="20220913 10:01:02.200" level="FAIL">No keyword with name 'Navegar por' found.</msg>
+<status status="FAIL" starttime="20220913 10:01:02.199" endtime="20220913 10:01:04.499"/>
+</kw>
+<kw name="Close the browser" type="TEARDOWN">
+<msg timestamp="20220913 10:01:04.514" level="FAIL">No keyword with name 'Close the browser' found.</msg>
+<status status="FAIL" starttime="20220913 10:01:04.514" endtime="20220913 10:01:05.245">No keyword with name 'Close the browser' found.</status>
+</kw>
+<status status="FAIL" starttime="20220913 10:01:02.187" endtime="20220913 10:01:05.246">No keyword with name 'Navegar por' found.
+
+Also teardown failed:
+No keyword with name 'Close the browser' found.</status>
+</test>
+<doc>Set a tee time.
+Take care to leave at least 2 (or 4) spaces between key words.
+E.g., "hoy o manana? _ _ manana" or "hoy o manana? _ _ _ _ hoy"</doc>
+<status status="FAIL" starttime="20220913 09:59:56.867" endtime="20220913 10:01:05.250"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tee Time">Tee Time</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220913 10:00:00.053" level="ERROR">Error in file 'c:\Users\jhkon\Desktop\Dev\python_projects\TeeTime_bot\tee_time.robot' on line 5: Importing library 'keywords' failed: TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "c:\Users\jhkon\Desktop\Dev\python_projects\TeeTime_bot\src\keywords.py", line 1, in &lt;module&gt;
+    from login_ops import LoginOps
+  File "c:\Users\jhkon\Desktop\Dev\python_projects\TeeTime_bot\src\login_ops.py", line 6, in &lt;module&gt;
+    from src.omnipresent import Omnipresent
+  File "c:\Users\jhkon\Desktop\Dev\python_projects\TeeTime_bot\src\omnipresent.py", line 16, in &lt;module&gt;
+    class Omnipresent:
+  File "c:\Users\jhkon\Desktop\Dev\python_projects\TeeTime_bot\src\omnipresent.py", line 17, in Omnipresent
+    driver = BrowserDriver.attach_chrome_driver()
+  File "c:\Users\jhkon\Desktop\Dev\python_projects\TeeTime_bot\src\browser_driver.py", line 54, in attach_chrome_driver
+    driver = webdriver.Chrome(
+  File "c:\Users\jhkon\Desktop\Dev\python_projects\TeeTime_bot\botenv\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 69, in __init__
+    super().__init__(DesiredCapabilities.CHROME['browserName'], "goog",
+  File "c:\Users\jhkon\Desktop\Dev\python_projects\TeeTime_bot\botenv\lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 92, in __init__
+    super().__init__(
+  File "c:\Users\jhkon\Desktop\Dev\python_projects\TeeTime_bot\botenv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 270, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "c:\Users\jhkon\Desktop\Dev\python_projects\TeeTime_bot\botenv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 366, in start_session
+    self.session_id = response['sessionId']
+PYTHONPATH:
+  c:\Users\jhkon\Desktop\Dev\python_projects\TeeTime_bot
+  c:\Users\jhkon\Desktop\Dev\python_projects\TeeTime_bot\src
+  c:\Users\jhkon\.vscode\extensions\robocorp.robotframework-lsp-1.1.0\src\robotframework_debug_adapter
+  C:\Users\jhkon\Desktop\Dev\python_projects\TeeTime_bot
+  c:\Users\jhkon\.vscode\extensions\robocorp.robotframework-lsp-1.1.0\src
+  c:\Users\jhkon\.vscode\extensions\robocorp.robotframework-lsp-1.1.0\src\robotframework_ls\vendored
+  C:\Users\jhkon\.pyenv\pyenv-win\versions\3.8.0\python38.zip
+  C:\Users\jhkon\.pyenv\pyenv-win\versions\3.8.0\DLLs
+  C:\Users\jhkon\.pyenv\pyenv-win\versions\3.8.0\lib
+  C:\Users\jhkon\.pyenv\pyenv-win\versions\3.8.0
+  c:\Users\jhkon\Desktop\Dev\python_projects\TeeTime_bot\botenv
+  c:\Users\jhkon\Desktop\Dev\python_projects\TeeTime_bot\botenv\lib\site-packages</msg>
+</errors>
+</robot>
